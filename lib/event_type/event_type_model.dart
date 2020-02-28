@@ -30,6 +30,9 @@ class EventType {
   static EventType getEventType(kEnumEventTypes eventType) {
     return eventTypeMap[eventType];
   }
+  static String getShortDescriptioFor(kEnumEventTypes eventType) {
+    return EventType.getEventType(eventType).shortDescription;
+  }
 
   List<EventType> possibleEventTypesChange() {
     if (this == getEventType(kEnumEventTypes.possibly_unavailable)) {
